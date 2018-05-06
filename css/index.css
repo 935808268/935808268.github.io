@@ -415,7 +415,7 @@ body{
 		}
 /*联系方式*/
 .wx{
-	width: 100%;
+	min-width: 60px;
 	position: absolute;
 	left:70%;
 	bottom: 0;
@@ -424,7 +424,7 @@ body{
      
 }
 .wx>.wx_car{
-	width: 20%;
+	width: 100%;
 	min-height: 100px;
 	max-height: 350px;
 }
